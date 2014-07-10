@@ -75,6 +75,10 @@ public:
             bool isThreadable;
         };
         DriverInfo info;
+
+#ifdef PVR_RSC
+        void * IMGPrivateData;
+#endif
     };
     Hal mHal;
 

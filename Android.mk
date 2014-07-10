@@ -49,6 +49,10 @@ ifeq ($(ARCH_ARM_HAVE_NEON),true)
         driver/rsdIntrinsics_Convolve.S
 endif
 
+ifeq ($(BOARD_USES_PVR_RSC),true)
+    rs_base_CFLAGS += -DPVR_RSC
+endif
+
 LOCAL_SHARED_LIBRARIES += libRS
 LOCAL_SHARED_LIBRARIES += libcutils libutils libEGL libGLESv1_CM libGLESv2
 LOCAL_SHARED_LIBRARIES += libbcc libbcinfo libui libgui libsync

@@ -73,6 +73,9 @@ public:
             mutable void * mallocPtrLOD0;
             mutable uint32_t strideLOD0;
         } drvState;
+#ifdef PVR_RSC
+        void * IMGPrivateData;
+#endif
 
     };
     Hal mHal;
